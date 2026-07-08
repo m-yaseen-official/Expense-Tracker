@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Login Container -->
+     <!-- <main> -->
+     <section id="login-container" class="container">
+        <div class="text-contaier">
+            <h1>Welcome Back👏</h1>
+            <p>Login to continue to your account</p>
+        </div>
+        <form id="login-form" >
+            <input type="text" placeholder="Enter your email" id="email">
+            <input type="text" placeholder="Enter your password" id="password">
+            <button type="submit">Login</button>
+            <p>Don't have an account? <span id="register-page">Register here</span></p>
+        </form>
+     </section>
+    <!-- Register Container -->
+     <section id="signup-container" class="container">
+      <div class="text-container">
+        <h1>Create Account</h1>
+        <p>Track Your Money Smarter</p>
+        </div>
+        <form id="signup-form" >
+            <input type="text" placeholder="Full-Name" id="email">
+            <input type="text" placeholder="Email"  id="email" >
+            <input type="text" placeholder="Password" id="password">
+            <button type="submit" class="zero" id="registerBtn" >Register</button>
+            <p>Already have an account? <span id="login-page">Login here</span></p>
+        </form>
+     </section>
+
+     
+     <!-- <section id="dashboard-container" class="dashboard">
+            <aside>
+                <div class="logo-container">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <div>
+                        <h4>Fin Track Pro</h4>
+                        <p>Enterprice Finance</p>
+                    </div>
+                </div>
+            </aside>
+            <main class="dashboard-overview">
+                <nav>
+                    <div class="nav-items">
+                        <div class="item">| &nbsp; Awais</div>
+                        <div class="item"><button><i class="fa-solid fa-right-from-bracket"></i> Logout</button></div>
+                    </div>
+                </nav>
+            </main>
+            
+        </section> -->
+    <!-- </main> -->
+  <div class="layout" id="dashboard-container">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-layer-group"></i></span>
+        <div class="brand-text">
+          <div class="brand-title">FinTrack Pro</div>
+          <div class="brand-sub">Enterprise Finance</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item active"><span class="ic"><i class="fa-solid fa-border-all"></i></span> Dashboard</a>
+        <a class="nav-item"><span class="ic"><i class="fa-solid fa-gear"></i></span> Settings</a>
+      </nav>
+      <button class="add-transaction">＋ Add Transaction</button>
+    </aside>
+
+    <div class="main">
+      <div class="topbar">
+        <span class="username">awais</span>
+        <span class="divider-v"></span>
+        <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+      </div>
+
+      <div class="content">
+        <div class="page-title">Financial Overview</div>
+        <div class="page-subtitle">Real-time tracking application</div>
+
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-icon blue"><i  class="fa-solid fa-building-columns"></i></div>
+            <div class="stat-label">Current Balance</div>
+            <div class="stat-value">$0.00</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green"><i style="color: green;" class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="stat-label">Total Income</div>
+            <div class="stat-value income">$0.00</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon red"><i style="color: darkred;" class="fa-solid fa-arrow-trend-down"></i></div>
+            <div class="stat-label">Total Expense</div>
+            <div class="stat-value expense">$0.00</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon blue"><i  class="fa-solid fa-piggy-bank"></i></div>
+            <div class="stat-label">Total Transactions</div>
+            <div class="stat-value">0</div>
+          </div>
+        </div>
+
+        <div class="dashboard-row">
+          <div class="card">
+            <div class="card-title">Cash Flow Analysis</div>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-swatch swatch-income"></span>Income</div>
+              <div class="legend-item"><span class="legend-swatch swatch-expense"></span>Expenses</div>
+            </div>
+            <div class="chart-area">
+              <div class="y-axis">
+                <span>1.0</span><span>0.9</span><span>0.8</span><span>0.7</span>
+                <span>0.6</span><span>0.5</span><span>0.4</span><span>0.3</span>
+                <span>0.2</span><span>0.1</span><span>0</span>
+              </div>
+              <div class="plot"></div>
+            </div>
+            <div class="x-axis-label">Income vs Expenses</div>
+          </div>
+
+          <div class="card preferences-card">
+            <div class="card-title">Preferences</div>
+            <div class="pref-row">
+              <span class="pref-label">Dark Mode</span>
+              <div class="toggle"></div>
+            </div>
+            <button class="reset-btn">🗑 Reset All Data</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">All Transactions</div>
+          <div class="transactions-header">
+            <div class="search-box">
+              🔍 <input type="text" placeholder="Search transactions...">
+            </div>
+            <select aria-label="State" class="filter-select">
+              <option>All Types</option>
+              <option>Income</option>
+              <option>Expense</option>
+            </select>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>DATE</th>
+                  <th>DESCRIPTION</th>
+                  <th>CATEGORY</th>
+                  <th>AMOUNT</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="empty-row">
+                  <td colspan="5">No transactions found</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="./app.js"></script>
+</body>
+</html>
